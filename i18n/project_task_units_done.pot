@@ -1,0 +1,27 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* project_task_units_done
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-20170207\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-24 18:31+0000\n"
+"PO-Revision-Date: 2017-09-24 18:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_task_units_done
+#: model:ir.model,name:project_task_units_done.model_project_task_work
+msgid "Project Task Work"
+msgstr ""
+
+#. module: project_task_units_done
+#: field:project.task.work,units_done:0
+msgid "Units done"
+msgstr ""
+
