@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0-20170207\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-24 18:31+0000\n"
-"PO-Revision-Date: 2017-09-24 18:31+0000\n"
+"POT-Creation-Date: 2017-09-26 14:28+0000\n"
+"PO-Revision-Date: 2017-09-26 14:28+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,28 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: project_task_units_done
+#: model:ir.model,name:project_task_units_done.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: project_task_units_done
 #: model:ir.model,name:project_task_units_done.model_project_task_work
 msgid "Project Task Work"
 msgstr ""
 
 #. module: project_task_units_done
+#: model:ir.model,name:project_task_units_done.model_hr_analytic_timesheet
+msgid "Timesheet Line"
+msgstr ""
+
+#. module: project_task_units_done
+#: view:account.analytic.line:project_task_units_done.view_account_analytic_line_tree_inherit_units_done
+msgid "Total units done"
+msgstr ""
+
+#. module: project_task_units_done
+#: field:account.analytic.line,units_done:0
+#: field:hr.analytic.timesheet,units_done:0
 #: field:project.task.work,units_done:0
 msgid "Units done"
 msgstr ""

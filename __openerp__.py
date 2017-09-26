@@ -27,7 +27,7 @@
     'website': "http://www.humanytek.com",
     'category': 'Project Management',
     'version': '1.0.0',
-    'depends': ['project', ],
+    'depends': ['project_timesheet', 'account', ],
     'data': [
         'views/project_view.xml',
     ],
