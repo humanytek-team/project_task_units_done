@@ -20,10 +20,40 @@
 #
 ###############################################################################
 
-from openerp import fields, models
+from openerp import api, fields, models
+
+
+class AccountAnalyticLine(models.Model):
+    _inherit = 'account.analytic.line'
+
+    units_done = fields.Float('Units done')
 
 
 class ProjectTaskWork(models.Model):
     _inherit = 'project.task.work'
 
     units_done = fields.Float('Units done')
+
+    @api.model
+    def _create_analytic_entries(self, vals):        
+
+        timeline_id = super(ProjectTaskWork, self)._create_analytic_entries(
+            vals)
+
+        if timeline_id:
+            HrAnalyticTimesheet = self.env['hr.analytic.timesheet']
+            timeline = HrAnalyticTimesheet.browse(timeline_id)
+            timeline.write({'units_done': vals['units_done']})
+
+        return timeline_id
+
+    @api.multi
+    def write(self, vals):
+        for task in self:
+            line_id = task.hr_analytic_timesheet_id
+            if not line_id:
+                continue
+
+            if 'units_done' in vals:
+                line_id.write({'units_done': vals['units_done']})
+        return super(ProjectTaskWork, self).write(vals)
