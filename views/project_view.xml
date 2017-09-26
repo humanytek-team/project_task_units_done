@@ -10,10 +10,21 @@
               <xpath
                 expr="//field[@name='work_ids']/tree/field[@name='hours']"
                 position="after">
-                  <field name="units_done" />                  
+                  <field name="units_done" />
               </xpath>
           </field>
       </record>
+
+      <record id="view_account_analytic_line_tree_inherit_units_done" model="ir.ui.view">
+           <field name="name">account.analytic.line.tree.units.done</field>
+           <field name="model">account.analytic.line</field>
+           <field name="inherit_id" ref="account.view_account_analytic_line_tree"/>
+           <field name="arch" type="xml">
+               <field name="unit_amount"  position="after">
+                   <field name="units_done" sum="Total units done" />
+               </field>
+           </field>
+       </record>
 
     </data>
 </openerp>
